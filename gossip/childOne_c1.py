@@ -15,11 +15,14 @@ while True:
 	time.sleep(2)
 	print 'Source	: {0} | time	: {1}\n'.format(addr[1], time.ctime(time.time()))
 	print "Message 	: {0}".format(packet)
-	ports=[None]
+	ports=[7005,7006]
 	
 	port_selected=random.choice(ports)
 	if not port_selected:
 		print "This node has no child to send data to!!"
-		break
+	else:
+		soc.sendto(packet, (host, port_selected))  # address to send the message to contains [host : port]
+		print "Message: {0} sent to {1}\n".format(packet, port_selected)
+		time.sleep(1)
 	
 soc.close() #Close the connection			

@@ -7,7 +7,7 @@ host = "127.0.0.1"
 port = 7002
 soc.bind((host, port)) 
 
-print "Server 3 started on port {0}...".format(port)
+print "Child two started on port {0}...".format(port)
 
 
 while True:

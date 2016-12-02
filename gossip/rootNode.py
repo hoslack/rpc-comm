@@ -26,4 +26,4 @@ while True: #server maintains an active state as long as the program is running
 
 	else:
 		print "\n"
-soc.close
+soc.close()

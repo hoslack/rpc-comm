@@ -4,10 +4,10 @@ import random
 
 soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 host = "127.0.0.1"
-port = 7004
+port = 7012
 soc.bind((host, port))
 
-print "Child two(7004) started on port {0}...".format(port)
+print "Child six(7012) started on port {0}...".format(port)
 
 while True:
     packet, addr = soc.recvfrom(1024)

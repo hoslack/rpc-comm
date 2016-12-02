@@ -11,7 +11,7 @@ soc.bind(HOST)
 print "Child one started on port {0}...".format(port)
 
 #children to This node
-ports = [7003, 7004]
+ports = [7005, 7006]
 
 while True:
 	packet, addr = soc.recvfrom(1024)

@@ -4,17 +4,17 @@ import random
 
 soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 host = "127.0.0.1"
-port = 7004
+port = 7008
 soc.bind((host, port))
 
-print "Child two(7004) started on port {0}...".format(port)
+print "Child four(7008) started on port {0}...".format(port)
 
 while True:
     packet, addr = soc.recvfrom(1024)
     time.sleep(2)
     print 'Source	: {0} | time	: {1}\n'.format(addr[1], time.ctime(time.time()))
     print "Message 	: {0}".format(packet)
-    ports = [None]
+    ports = [7009, 7010]
 
     port_selected = random.choice(ports)
     if not port_selected:
